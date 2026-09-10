@@ -1,0 +1,33 @@
+{
+  "family_name": "Oliveira",
+  "move_in_date": "2025-03-09",
+  "number_of_people": 5,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Marcos Oliveira",
+      "gender": "Male",
+      "birthdate": "1987-02-11"
+    },
+    {
+      "name": "Beatriz Oliveira",
+      "gender": "Female",
+      "birthdate": "1989-09-27"
+    },
+    {
+      "name": "Rafael Oliveira",
+      "gender": "Male",
+      "birthdate": "2014-06-03"
+    },
+    {
+      "name": "Helena Oliveira",
+      "gender": "Female",
+      "birthdate": "2017-12-19"
+    },
+    {
+      "name": "Tomas Oliveira",
+      "gender": "Male",
+      "birthdate": "2021-04-30"
+    }
+  ]
+}
