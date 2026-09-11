@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Fortaleza Chamber of Commerce logo">
+  <rect width="48" height="48" rx="10" fill="#0f6b64"/>
+  <path d="M24 9l13 6v4H11v-4l13-6z" fill="#e8930c"/>
+  <rect x="13" y="21" width="4" height="12" fill="#ffffff"/>
+  <rect x="22" y="21" width="4" height="12" fill="#ffffff"/>
+  <rect x="31" y="21" width="4" height="12" fill="#ffffff"/>
+  <rect x="11" y="35" width="26" height="4" fill="#ffffff"/>
+</svg>

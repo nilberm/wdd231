@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Fortaleza Chamber of Commerce</title>
+    <meta name="description" content="Business directory of the Fortaleza Chamber of Commerce, listing member companies in Fortaleza, Ceara, with contact details and membership levels.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fortaleza Chamber of Commerce">
+    <meta property="og:title" content="Directory | Fortaleza Chamber of Commerce">
+    <meta property="og:description" content="Find member businesses of the Fortaleza Chamber of Commerce, with contact details, websites, and membership levels.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/chamber/images/chamber-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/chamber/directory.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="directory.html">
+            <img src="images/logo.svg" alt="" width="42" height="42">
+            <span>Fortaleza Chamber of Commerce</span>
+        </a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Primary">
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" aria-current="page">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <h1>Directory</h1>
+
+        <div class="view-toggle" role="group" aria-label="Choose how to view the member list">
+            <button type="button" data-view="grid" aria-pressed="true">Grid</button>
+            <button type="button" data-view="list" aria-pressed="false">List</button>
+        </div>
+
+        <div id="members" class="grid-view"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-contact">
+                <strong>Fortaleza Chamber of Commerce</strong>
+                <p>Av. Beira Mar, 3200 - Meireles</p>
+                <p>Fortaleza, CE 60165-121</p>
+                <p><a href="mailto:info@fortalezachamber.com.br">info@fortalezachamber.com.br</a></p>
+                <p><a href="tel:+558532552300">(85) 3255-2300</a></p>
+            </div>
+
+            <ul class="footer-social" aria-label="Social media">
+                <li>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.x.com" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1 2h6.8l4.7 6.2L18.9 2Zm-1.2 18h1.8L7.3 3.9H5.4L17.7 20Z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer-dev">
+                <p>WDD 231 Class Project</p>
+                <p>Nilber Mota</p>
+                <p>&copy; <span id="year"></span> Fortaleza Chamber of Commerce</p>
+                <p id="last-modified">Last Modification: </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
