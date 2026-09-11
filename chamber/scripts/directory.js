@@ -29,6 +29,7 @@ const displayMembers = (members) => {
         const phoneDigits = member.phone.replace(/[^\d+]/g, "");
         const siteLabel = member.website.replace(/^https?:\/\/(www\.)?/, "");
         const priority = index === 0 ? 'fetchpriority="high"' : 'loading="lazy"';
+        const smallImage = member.image.replace(/\.jpg$/, "-sm.jpg");
 
         card.innerHTML = `
             <div class="member__head">
@@ -37,7 +38,10 @@ const displayMembers = (members) => {
                 <span class="member__badge ${levelClasses[level]}">${levelLabels[level]}</span>
             </div>
             <div class="member__body">
-                <img src="images/${member.image}" alt="${member.imageAlt}"
+                <img src="images/${smallImage}"
+                     srcset="images/${smallImage} 440w, images/${member.image} 900w"
+                     sizes="(min-width: 700px) 340px, 220px"
+                     alt="${member.imageAlt}"
                      ${priority} width="300" height="200">
                 <dl>
                     <dt>Email</dt>
