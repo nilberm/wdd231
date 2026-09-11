@@ -196,6 +196,7 @@ main h1 {
 #members {
     display: grid;
     gap: 1.25rem;
+    min-height: 420px;
 }
 
 .member {

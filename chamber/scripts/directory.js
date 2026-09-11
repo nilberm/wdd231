@@ -21,13 +21,14 @@ async function getMembers() {
 const displayMembers = (members) => {
     membersContainer.innerHTML = "";
 
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         const card = document.createElement("section");
         card.classList.add("member");
 
         const level = member.membershipLevel;
         const phoneDigits = member.phone.replace(/[^\d+]/g, "");
         const siteLabel = member.website.replace(/^https?:\/\/(www\.)?/, "");
+        const priority = index === 0 ? 'fetchpriority="high"' : 'loading="lazy"';
 
         card.innerHTML = `
             <div class="member__head">
@@ -37,7 +38,7 @@ const displayMembers = (members) => {
             </div>
             <div class="member__body">
                 <img src="images/${member.image}" alt="${member.imageAlt}"
-                     loading="lazy" width="300" height="200">
+                     ${priority} width="300" height="200">
                 <dl>
                     <dt>Email</dt>
                     <dd><a href="mailto:${member.email}">${member.email}</a></dd>
