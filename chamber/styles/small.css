@@ -52,11 +52,14 @@ a {
 .site-header {
     background-color: var(--teal);
     color: #fff;
+    padding-block: 0.7rem;
+}
+
+.site-header__inner {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.7rem 1rem;
 }
 
 .brand {
@@ -155,11 +158,219 @@ main {
     padding-block: 1.5rem 3rem;
 }
 
-main h1 {
+.wrap > h1 {
     font-size: 1.7rem;
     border-bottom: 3px solid var(--orange);
     padding-bottom: 0.3rem;
     margin-bottom: 1.2rem;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    margin-top: -1.5rem;
+    overflow: hidden;
+}
+
+.hero + .wrap {
+    margin-top: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(100deg, rgba(10, 76, 71, 0.88) 0%, rgba(10, 76, 71, 0.55) 55%, rgba(10, 76, 71, 0.1) 100%);
+    color: #fff;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: 1.5rem;
+}
+
+.hero__overlay h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    max-width: 18ch;
+}
+
+.hero__overlay p {
+    margin: 0;
+    max-width: 30ch;
+    font-size: 0.9rem;
+    color: #eef5f4;
+}
+
+.cta {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.65rem 1.3rem;
+    background-color: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.cta:hover {
+    background-color: var(--orange-dark);
+}
+
+/* Shared card surface */
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(10, 76, 71, 0.08);
+}
+
+.card > h2 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--line);
+    font-size: 1.2rem;
+    color: var(--teal-dark);
+}
+
+/* Home page layout */
+.home-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.events__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.events__list li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.events__list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.events__date {
+    margin: 0 0 0.15rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--orange-dark);
+}
+
+.events__list h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+}
+
+.events__list p:not(.events__date) {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.weather__now {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.weather__temp {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+}
+
+.weather__desc {
+    margin: 0;
+    color: var(--muted);
+    text-transform: capitalize;
+}
+
+.forecast {
+    list-style: none;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.forecast__day {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.forecast img {
+    margin-inline: auto;
+}
+
+.forecast__temp {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.spotlights {
+    margin-bottom: 1.5rem;
+}
+
+.spotlights__grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.spotlight {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(10, 76, 71, 0.08);
+}
+
+.spotlight img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.spotlight__body {
+    padding: 1rem;
+}
+
+.spotlight__body h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+}
+
+.spotlight__body p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: var(--muted);
 }
 
 /* View toggle */

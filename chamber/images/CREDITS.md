@@ -12,5 +12,6 @@ The 8 business photos in this folder are real, freely-licensed stock photos from
 | clinica-vida-plena.jpg | Modern medical examination room | Shixart1985 | CC BY 2.0 |
 | cajueiro-verde-comercio.jpg | Souvenir and Handicraft Shop Interior 01 | RizaCPH | CC BY-SA 4.0 |
 | fortaleza-advogados-associados.jpg | Legal Contract & Signature - Warm Tones | Blogtrepreneur | CC BY 2.0 |
+| hero-fortaleza.jpg / hero-fortaleza-sm.jpg | Iracema Beach, Fortaleza, Brazil 4 | (Wikimedia Commons upload) | CC BY 2.0 |
 
 All sourced from commons.wikimedia.org.

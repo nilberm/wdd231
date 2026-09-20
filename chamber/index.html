@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Fortaleza Chamber of Commerce</title>
-    <meta name="description" content="Business directory of the Fortaleza Chamber of Commerce, listing member companies in Fortaleza, Ceara, with contact details and membership levels.">
+    <title>Fortaleza Chamber of Commerce</title>
+    <meta name="description" content="Home page of the Fortaleza Chamber of Commerce, with current events, local weather, and spotlights on member businesses.">
     <meta name="author" content="Nilber Mota">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Fortaleza Chamber of Commerce">
-    <meta property="og:title" content="Directory | Fortaleza Chamber of Commerce">
-    <meta property="og:description" content="Find member businesses of the Fortaleza Chamber of Commerce, with contact details, websites, and membership levels.">
+    <meta property="og:title" content="Fortaleza Chamber of Commerce">
+    <meta property="og:description" content="Home page of the Fortaleza Chamber of Commerce, with current events, local weather, and spotlights on member businesses.">
     <meta property="og:image" content="https://nilberm.github.io/wdd231/chamber/images/chamber-og.png">
-    <meta property="og:url" content="https://nilberm.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/chamber/index.html">
     <meta property="og:locale" content="en_US">
 
     <link rel="icon" href="images/favicon.ico">
@@ -27,12 +27,13 @@
     <script src="scripts/fonts.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <div class="wrap site-header__inner">
-            <a class="brand" href="directory.html">
+            <a class="brand" href="index.html">
                 <img src="images/logo.svg" alt="" width="42" height="42">
                 <span>Fortaleza Chamber of Commerce</span>
             </a>
@@ -43,24 +44,74 @@
             </button>
             <nav class="site-nav" aria-label="Primary">
                 <ul id="nav-list">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html" aria-current="page">Directory</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="wrap">
-        <h1>Directory</h1>
+    <main>
+        <section class="hero">
+            <img
+                src="images/hero-fortaleza-sm.jpg"
+                srcset="images/hero-fortaleza-sm.jpg 700w, images/hero-fortaleza.jpg 1400w"
+                sizes="100vw"
+                alt="Skyline and beach of Fortaleza, Brazil"
+                width="1400" height="583"
+                fetchpriority="high">
+            <div class="hero__overlay">
+                <div class="wrap hero__content">
+                    <h1>Fortaleza Chamber of Commerce</h1>
+                    <p>Connecting local businesses and building a stronger community on the coast of Ceara.</p>
+                    <a class="cta" href="join.html">Join the Chamber</a>
+                </div>
+            </div>
+        </section>
 
-        <div class="view-toggle" role="group" aria-label="Choose how to view the member list">
-            <button type="button" data-view="grid" aria-pressed="true">Grid</button>
-            <button type="button" data-view="list" aria-pressed="false">List</button>
+        <div class="wrap">
+            <div class="home-grid">
+                <section class="card events">
+                    <h2>Current Events</h2>
+                    <ul class="events__list">
+                        <li>
+                            <p class="events__date">Oct 3, 2026</p>
+                            <h3>Fortaleza Business Networking Breakfast</h3>
+                            <p>Meet fellow members over coffee and pao de queijo at the Meireles headquarters, 8-9:30 AM.</p>
+                        </li>
+                        <li>
+                            <p class="events__date">Oct 18, 2026</p>
+                            <h3>Ceara Tech &amp; Innovation Summit</h3>
+                            <p>A half-day summit on digital growth for small businesses, hosted with Aldeota Tech Hub.</p>
+                        </li>
+                        <li>
+                            <p class="events__date">Nov 7, 2026</p>
+                            <h3>Beira Mar Street Market Kickoff</h3>
+                            <p>Member vendors showcase local products along the boardwalk, 4-9 PM.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card weather">
+                    <h2>Weather in Fortaleza</h2>
+                    <div class="weather__now">
+                        <img id="weather-icon" src="" alt="" width="70" height="70">
+                        <div>
+                            <p id="current-temp" class="weather__temp"></p>
+                            <p id="weather-desc" class="weather__desc"></p>
+                        </div>
+                    </div>
+                    <ul id="forecast-list" class="forecast" aria-label="3 day forecast"></ul>
+                </section>
+            </div>
+
+            <section class="card spotlights">
+                <h2>Business Spotlights</h2>
+                <div id="spotlights" class="spotlights__grid"></div>
+            </section>
         </div>
-
-        <div id="members" class="grid-view"></div>
     </main>
 
     <footer class="site-footer">
