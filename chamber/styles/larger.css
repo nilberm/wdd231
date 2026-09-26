@@ -75,6 +75,10 @@
         padding: 0.9rem 1rem;
     }
 
+    .hero {
+        min-height: 380px;
+    }
+
     .hero__content {
         padding-block: 2rem;
     }
@@ -104,6 +108,10 @@
 
     #members.grid-view {
         grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+
+    .hero {
+        min-height: 460px;
     }
 
     .hero__text h1 {
