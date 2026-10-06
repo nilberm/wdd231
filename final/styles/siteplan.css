@@ -1,0 +1,316 @@
+:root {
+    --pine: #12304a;
+    --maple: #b3202d;
+    --glacier: #1f6a93;
+    --ink: #1d2733;
+    --snow: #f5f8fb;
+    --white: #ffffff;
+    --divider: rgb(18 48 74 / 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--snow);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+.brand,
+.plan-nav a {
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.6rem;
+    color: var(--pine);
+    line-height: 1.25;
+}
+
+a {
+    color: var(--glacier);
+}
+
+a:hover {
+    color: var(--maple);
+}
+
+:focus-visible {
+    outline: 3px solid var(--maple);
+    outline-offset: 2px;
+}
+
+.wrap {
+    width: min(100% - 2rem, 62rem);
+    margin-inline: auto;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--maple);
+    color: var(--white);
+    font-weight: 600;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    top: 0.5rem;
+    color: var(--white);
+}
+
+.site-header {
+    padding-block: 1.25rem;
+    background-color: var(--pine);
+    color: var(--white);
+    border-bottom: 4px solid var(--maple);
+}
+
+.brand {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.tagline {
+    margin: 0;
+    color: var(--snow);
+    font-size: 0.95rem;
+}
+
+.plan-nav {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--divider);
+}
+
+.plan-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin-block: 0;
+    padding: 0.6rem 0;
+    list-style: none;
+}
+
+.plan-nav a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.plan-nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-block: 2rem 3rem;
+}
+
+main > h1 {
+    margin-bottom: 0.4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.intro {
+    margin: 0 0 1.5rem;
+    font-size: 1.15rem;
+}
+
+.panel {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: 10px;
+}
+
+.panel > h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--maple);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.panel h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.panel ul {
+    padding-left: 1.25rem;
+}
+
+.highlight {
+    margin: 0 0 0.75rem;
+    color: var(--maple);
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+code {
+    padding: 0.1rem 0.4rem;
+    background-color: var(--snow);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+}
+
+.swatches,
+.fonts {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.panel .swatches,
+.panel .fonts {
+    padding-left: 0;
+}
+
+.swatch,
+.font-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--snow);
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+}
+
+.swatch h3 {
+    margin-bottom: 0.2rem;
+}
+
+.swatch p,
+.font-card p {
+    margin: 0;
+}
+
+.swatch__chip {
+    flex: 0 0 3.5rem;
+    height: 3.5rem;
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+}
+
+.swatch__chip--pine {
+    background-color: var(--pine);
+}
+
+.swatch__chip--maple {
+    background-color: var(--maple);
+}
+
+.swatch__chip--glacier {
+    background-color: var(--glacier);
+}
+
+.swatch__chip--ink {
+    background-color: var(--ink);
+}
+
+.swatch__chip--snow {
+    background-color: var(--snow);
+}
+
+.swatch__chip--white {
+    background-color: var(--white);
+}
+
+.hex {
+    display: block;
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.font-card {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.font-card h3 {
+    margin: 0;
+}
+
+.font-sample {
+    margin: 0;
+    color: var(--pine);
+    font-size: 1.3rem;
+}
+
+.font-sample--heading {
+    font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+    font-weight: 700;
+}
+
+.font-sample--body {
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+}
+
+figure {
+    margin: 1.25rem 0;
+}
+
+figure img {
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.site-footer {
+    padding-block: 1.25rem;
+    background-color: var(--pine);
+    color: var(--snow);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+}
+
+@media (min-width: 700px) {
+    main > h1 {
+        font-size: 2.3rem;
+    }
+
+    .panel {
+        padding: 1.75rem;
+    }
+
+    .swatches,
+    .fonts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northbound Site Plan | Nilber Mota</title>
+    <meta name="description" content="Website plan for Northbound, a Canada relocation guide for skilled workers: site name, purpose, scenarios, colors, fonts, and wireframes.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Northbound">
+    <meta property="og:title" content="Northbound Site Plan | Canada Relocation Guide">
+    <meta property="og:description" content="Website plan for Northbound, a Canada relocation guide for skilled workers: site name, purpose, scenarios, colors, fonts, and wireframes.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/final/images/northbound-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/final/siteplan.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <p class="brand">Northbound</p>
+            <p class="tagline">Website plan for the WDD 231 individual project</p>
+        </div>
+    </header>
+
+    <nav class="plan-nav" aria-label="Site plan sections">
+        <ul class="wrap">
+            <li><a href="#site-name">Site Name</a></li>
+            <li><a href="#site-purpose">Purpose</a></li>
+            <li><a href="#scenarios">Scenarios</a></li>
+            <li><a href="#color-scheme">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#wireframe">Wireframe</a></li>
+        </ul>
+    </nav>
+
+    <main id="main" class="wrap">
+        <h1>Northbound Website Plan</h1>
+        <p class="intro">A guide that helps skilled workers research and compare Canadian cities before relocating.</p>
+
+        <section id="site-name" class="panel">
+            <h2>1. Site Name</h2>
+            <p class="highlight">Northbound</p>
+            <ul>
+                <li>The name points toward Canada and forward progress, which matches the journey of a skilled worker relocating north.</li>
+                <li>It is short, easy to remember, and works well as a logo word mark.</li>
+            </ul>
+            <p>Optional domain idea (availability not checked): <code>northboundguide.ca</code></p>
+        </section>
+
+        <section id="site-purpose" class="panel">
+            <h2>2. Site Purpose</h2>
+            <p>Northbound is an information hub that helps skilled workers research and compare Canadian cities before relocating. It explains the main immigration pathways and lets visitors compare destinations using real data.</p>
+            <h3>Planned pages</h3>
+            <ul>
+                <li><strong>Home:</strong> introduces the guide, highlights featured cities, and links to the other pages.</li>
+                <li><strong>Cities:</strong> a filterable directory of 15 or more Canadian cities with province, population, average rent, immigration pathway, and live weather. Each city opens in a modal with full details.</li>
+                <li><strong>Pathways:</strong> explains Express Entry, the Provincial Nominee Program, and work permits, with a form to request personalized city recommendations.</li>
+                <li><strong>Confirmation page:</strong> displays the submitted form data after the form is sent.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios" class="panel">
+            <h2>3. Scenarios</h2>
+            <p>Questions a visitor from the target audience might ask:</p>
+            <ul>
+                <li>Which Canadian city has affordable rent and good job prospects for software developers?</li>
+                <li>What is the difference between Express Entry and the Provincial Nominee Program?</li>
+                <li>What is the weather like right now in Calgary compared to Vancouver?</li>
+                <li>How can I get city suggestions that match my budget and climate preference?</li>
+            </ul>
+        </section>
+
+        <section id="color-scheme" class="panel">
+            <h2>4. Color Scheme</h2>
+            <p>The palette uses a deep navy and a maple red, inspired by Canada, with cool neutrals for readability. This document uses only these colors.</p>
+            <ul class="swatches">
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--pine" aria-hidden="true"></span>
+                    <div>
+                        <h3>Pine Navy <span class="hex">#12304a</span></h3>
+                        <p>Header and footer backgrounds, and headings.</p>
+                    </div>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--maple" aria-hidden="true"></span>
+                    <div>
+                        <h3>Maple Red <span class="hex">#b3202d</span></h3>
+                        <p>Accent lines under headings, call to action buttons, and hover states.</p>
+                    </div>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--glacier" aria-hidden="true"></span>
+                    <div>
+                        <h3>Glacier Blue <span class="hex">#1f6a93</span></h3>
+                        <p>Links and secondary buttons.</p>
+                    </div>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--ink" aria-hidden="true"></span>
+                    <div>
+                        <h3>Ink <span class="hex">#1d2733</span></h3>
+                        <p>Paragraph and list text.</p>
+                    </div>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--snow" aria-hidden="true"></span>
+                    <div>
+                        <h3>Snow <span class="hex">#f5f8fb</span></h3>
+                        <p>Page background and light text on dark backgrounds.</p>
+                    </div>
+                </li>
+                <li class="swatch">
+                    <span class="swatch__chip swatch__chip--white" aria-hidden="true"></span>
+                    <div>
+                        <h3>White <span class="hex">#ffffff</span></h3>
+                        <p>Card and panel surfaces, and text on Pine Navy and Maple Red.</p>
+                    </div>
+                </li>
+            </ul>
+            <p>All text and background pairs meet the WCAG AA contrast ratio of 4.5:1 or higher.</p>
+        </section>
+
+        <section id="typography" class="panel">
+            <h2>5. Typography</h2>
+            <p>Both fonts come from Google Fonts. A modern geometric sans pairs with a highly readable humanist sans.</p>
+            <ul class="fonts">
+                <li class="font-card">
+                    <h3>Montserrat</h3>
+                    <p class="font-sample font-sample--heading">Find your city in Canada</p>
+                    <p>Weights 600 and 700. Used for the site name, headings, navigation links, and buttons.</p>
+                </li>
+                <li class="font-card">
+                    <h3>Source Sans 3</h3>
+                    <p class="font-sample font-sample--body">Compare rent, weather, and immigration pathways before you move.</p>
+                    <p>Weights 400 and 600. Used for body text, lists, form labels, captions, and the footer.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="wireframe" class="panel">
+            <h2>6. Wireframe</h2>
+            <p>Black and white sketches of the home page for a small screen and a large screen.</p>
+
+            <figure>
+                <img src="images/wireframe-small.webp" alt="Black and white wireframe of the Northbound home page on a small screen" width="249" height="895" loading="lazy">
+                <figcaption>Small screen: the navigation collapses into a hamburger button and all sections stack in one column.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/wireframe-large.webp" alt="Black and white wireframe of the Northbound home page on a large screen" width="960" height="905" loading="lazy">
+                <figcaption>Large screen: the navigation links display horizontally and the featured cities sit side by side.</figcaption>
+            </figure>
+
+            <h3>Home page layout notes</h3>
+            <ul>
+                <li>Header with the logo and site name, plus the main navigation with wayfinding.</li>
+                <li>Hero image with a short welcome message and a call to action link to the city directory.</li>
+                <li>Three featured city cards loaded from the JSON data.</li>
+                <li>A short pathways teaser with a link to the pathways page.</li>
+                <li>Footer with the demo video link, the attributions link, and the last modified date.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>Nilber Mota | WDD 231 | Northbound Site Plan</p>
+            <p>&copy; 2026 Nilber Mota</p>
+        </div>
+    </footer>
+</body>
+</html>
