@@ -144,3 +144,38 @@
         text-align: right;
     }
 }
+
+@media (min-width: 641px) {
+    .place {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "title title"
+            "image desc"
+            "image address"
+            "action action";
+    }
+
+    .place p {
+        align-self: start;
+    }
+
+    .place address {
+        align-self: end;
+    }
+
+    .place img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .place img:hover {
+        transform: scale(1.06);
+        filter: saturate(1.35) brightness(1.05);
+    }
+}
+
+@media (min-width: 1025px) {
+    .places {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

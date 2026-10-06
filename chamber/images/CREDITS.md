@@ -15,3 +15,18 @@ The 8 business photos in this folder are real, freely-licensed stock photos from
 | hero-fortaleza.jpg / hero-fortaleza-sm.jpg | Iracema Beach, Fortaleza, Brazil 4 | (Wikimedia Commons upload) | CC BY 2.0 |
 
 All sourced from commons.wikimedia.org.
+
+## Discover page photos (images/discover)
+
+| File | Author | License |
+|---|---|---|
+| praia-de-iracema.webp | Keijuu | CC BY-SA 4.0 |
+| ponte-dos-ingleses.webp | ME/Portal da Copa/Embratur | CC BY 3.0 br |
+| catedral-metropolitana.webp | Ridiculopathy | CC0 |
+| theatro-jose-de-alencar.webp | GLandovsky | CC BY-SA 4.0 |
+| mercado-central.webp | Ridiculopathy | CC0 |
+| centro-dragao-do-mar.webp | MTur Destinos | Public domain |
+| praia-do-futuro.webp | Fronteira | CC BY-SA 4.0 |
+| parque-do-coco.webp | Atrium | CC BY-SA 3.0 |
+
+All sourced from commons.wikimedia.org.

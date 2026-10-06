@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Fortaleza Chamber of Commerce</title>
-    <meta name="description" content="Business directory of the Fortaleza Chamber of Commerce, listing member companies in Fortaleza, Ceara, with contact details and membership levels.">
+    <title>Discover Fortaleza | Fortaleza Chamber of Commerce</title>
+    <meta name="description" content="Discover Fortaleza, Ceara: eight places of interest for visitors and future members, from Praia de Iracema to Parque do Coco.">
     <meta name="author" content="Nilber Mota">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Fortaleza Chamber of Commerce">
-    <meta property="og:title" content="Directory | Fortaleza Chamber of Commerce">
-    <meta property="og:description" content="Find member businesses of the Fortaleza Chamber of Commerce, with contact details, websites, and membership levels.">
+    <meta property="og:title" content="Discover Fortaleza | Fortaleza Chamber of Commerce">
+    <meta property="og:description" content="Discover eight places of interest in Fortaleza, Ceara, for visitors and future chamber members.">
     <meta property="og:image" content="https://nilberm.github.io/wdd231/chamber/images/chamber-og.png">
-    <meta property="og:url" content="https://nilberm.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/chamber/discover.html">
     <meta property="og:locale" content="en_US">
 
     <link rel="icon" href="images/favicon.ico">
@@ -27,7 +27,7 @@
     <script src="scripts/fonts.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script type="module" src="scripts/discover.mjs"></script>
 </head>
 <body>
     <header class="site-header">
@@ -44,8 +44,8 @@
             <nav class="site-nav" aria-label="Primary">
                 <ul id="nav-list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html" aria-current="page">Directory</a></li>
+                    <li><a href="discover.html" aria-current="page">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
@@ -53,15 +53,22 @@
     </header>
 
     <main class="wrap">
-        <h1>Directory</h1>
+        <h1>Discover Fortaleza</h1>
 
-        <div class="view-toggle" role="group" aria-label="Choose how to view the member list">
-            <button type="button" data-view="grid" aria-pressed="true">Grid</button>
-            <button type="button" data-view="list" aria-pressed="false">List</button>
+        <div id="visit-message" class="visit-message" role="status" hidden>
+            <p id="visit-text"></p>
+            <button type="button" id="visit-close" class="visit-close" aria-label="Dismiss visit message">&times;</button>
         </div>
 
-        <div id="members" class="grid-view"></div>
+        <div id="places" class="places"></div>
     </main>
+
+    <dialog id="place-modal" class="modal">
+        <h2 id="modal-title"></h2>
+        <address id="modal-address"></address>
+        <p id="modal-details"></p>
+        <button type="button" class="modal-close">Close</button>
+    </dialog>
 
     <footer class="site-footer">
         <div class="wrap">

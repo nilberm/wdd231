@@ -246,7 +246,8 @@ main {
 /* Shared card surface */
 .card,
 .member,
-.spotlight {
+.spotlight,
+.place {
     background-color: var(--surface);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -718,7 +719,7 @@ main {
 }
 
 /* Membership modals */
-.membership-modal {
+.modal {
     width: min(90vw, 26rem);
     border: none;
     border-radius: 10px;
@@ -726,22 +727,22 @@ main {
     box-shadow: 0 10px 30px rgba(10, 76, 71, 0.25);
 }
 
-.membership-modal::backdrop {
+.modal::backdrop {
     background-color: rgba(10, 76, 71, 0.55);
 }
 
-.membership-modal h2 {
+.modal h2 {
     margin: 0 0 0.5rem;
     color: var(--teal-dark);
 }
 
-.membership-modal ul {
+.modal ul {
     margin: 0.75rem 0;
     padding-left: 1.2rem;
     color: var(--muted);
 }
 
-.membership-modal .modal-close {
+.modal .modal-close {
     margin-top: 0.5rem;
     padding: 0.5rem 1.1rem;
     font: inherit;
@@ -753,7 +754,7 @@ main {
     cursor: pointer;
 }
 
-.membership-modal .modal-close:hover {
+.modal .modal-close:hover {
     background-color: var(--teal-dark);
 }
 
@@ -772,4 +773,103 @@ main {
 
 .summary-list dd {
     margin: 0;
+}
+
+.visit-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--teal-050);
+    border-left: 4px solid var(--orange);
+    border-radius: 6px;
+}
+
+.visit-message p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--teal-dark);
+}
+
+.visit-close {
+    padding: 0 0.5rem;
+    font: inherit;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--teal-dark);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.places {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.place {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    grid-template-areas:
+        "title"
+        "image"
+        "desc"
+        "address"
+        "action";
+}
+
+.place h2 {
+    grid-area: title;
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--teal-dark);
+}
+
+.place figure {
+    grid-area: image;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.place img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.place p {
+    grid-area: desc;
+    margin: 0;
+}
+
+.place address {
+    grid-area: address;
+    font-style: italic;
+    color: var(--muted);
+}
+
+.place__more {
+    grid-area: action;
+    padding: 0.7rem 1rem;
+    font: inherit;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--teal-dark);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.place__more:hover {
+    background-color: var(--orange-dark);
+}
+
+.visit-message[hidden] {
+    display: none;
 }
