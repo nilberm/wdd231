@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Cities | Northbound</title>
+    <meta name="description" content="Compare 16 Canadian cities by rent, population, climate, and immigration pathway, and check the live weather before you relocate.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Northbound">
+    <meta property="og:title" content="Compare Canadian Cities | Northbound Guide">
+    <meta property="og:description" content="Compare 16 Canadian cities by rent, population, climate, and immigration pathway, and check the live weather before you relocate.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/final/images/northbound-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/final/cities.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/cities.mjs"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="" width="40" height="40">
+                <span>Northbound</span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cities.html" aria-current="page">Cities</a></li>
+                    <li><a href="pathways.html">Pathways</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <h1 class="page-title">Canadian Cities</h1>
+        <p class="lede">Filter, sort, and open any city to see live weather, key industries, and its main immigration pathway.</p>
+
+        <div class="cities-layout">
+            <section class="card filters" aria-labelledby="filters-title">
+                <h2 id="filters-title">Filter and sort</h2>
+                <form id="filters">
+                    <label class="field" for="province">Province
+                        <select id="province" name="province" title="Filter cities by province">
+                            <option value="all">All provinces</option>
+                        </select>
+                    </label>
+                    <label class="field" for="sort">Sort by
+                        <select id="sort" name="sort" title="Sort the cities">
+                            <option value="name">Name (A to Z)</option>
+                            <option value="rent-asc">Rent (low to high)</option>
+                            <option value="rent-desc">Rent (high to low)</option>
+                            <option value="population">Population (largest first)</option>
+                        </select>
+                    </label>
+                    <label class="field field--check" for="saved-only">
+                        <input type="checkbox" id="saved-only" name="savedOnly">
+                        Show saved cities only
+                    </label>
+                    <button type="button" id="reset-filters" class="btn btn--outline">Reset filters</button>
+                </form>
+            </section>
+
+            <section aria-labelledby="results-title">
+                <h2 id="results-title" class="visually-hidden">Cities</h2>
+                <p id="results-status" class="status" role="status">Loading cities...</p>
+                <div id="city-list" class="card-grid"></div>
+            </section>
+        </div>
+
+        <section class="section card" aria-labelledby="data-title">
+            <h2 id="data-title">About the data</h2>
+            <p>Population numbers are rounded from the 2021 Census. Rent values are approximate average asking rents for a one bedroom apartment and change often, so check current listings before you decide. See the <a href="attributions.html">attributions page</a> for sources.</p>
+        </section>
+    </main>
+
+    <dialog id="city-modal" class="modal" aria-labelledby="modal-title">
+        <h2 id="modal-title">City details</h2>
+        <p id="modal-province"></p>
+        <p id="modal-description"></p>
+        <dl id="modal-facts" class="facts"></dl>
+        <div id="modal-weather" class="weather" aria-live="polite"></div>
+        <div class="modal__actions">
+            <button type="button" id="modal-save" class="btn btn--outline" aria-pressed="false">Save to favorites</button>
+            <button type="button" id="modal-close" class="btn">Close</button>
+        </div>
+    </dialog>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <ul class="footer-links">
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project demo video</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+            <p class="footer-brand">Northbound</p>
+            <p class="footer-meta">&copy; <span id="year">2026</span> Nilber Mota<br>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

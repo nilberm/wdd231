@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received | Northbound</title>
+    <meta name="description" content="Confirmation of your Northbound city recommendation request, with a summary of your answers and suggested Canadian cities.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Northbound">
+    <meta property="og:title" content="Request Received | Northbound Relocation Guide">
+    <meta property="og:description" content="Confirmation of your Northbound city recommendation request, with a summary of your answers and suggested Canadian cities.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/final/images/northbound-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/final/confirmation.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/confirmation.mjs"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="" width="40" height="40">
+                <span>Northbound</span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="pathways.html">Pathways</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <h1 class="page-title">Thank You</h1>
+        <p class="lede">We received your request. Here is a summary of what you sent and the cities that match it.</p>
+
+        <section class="card" aria-labelledby="summary-title">
+            <h2 id="summary-title">Your request</h2>
+            <dl id="summary" class="summary"></dl>
+        </section>
+
+        <section class="section" aria-labelledby="recommendations-title">
+            <h2 id="recommendations-title">Suggested cities</h2>
+            <p id="recommendations-note" class="status">Loading suggestions...</p>
+            <div id="recommendations" class="card-grid"></div>
+        </section>
+
+        <section class="section card" aria-labelledby="next-title">
+            <h2 id="next-title">Next steps</h2>
+            <p>Open any suggested city to see live weather and key industries, or review the <a href="pathways.html">immigration pathways</a> again. You can also <a href="cities.html">browse every city</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <ul class="footer-links">
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project demo video</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+            <p class="footer-brand">Northbound</p>
+            <p class="footer-meta">&copy; <span id="year">2026</span> Nilber Mota<br>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

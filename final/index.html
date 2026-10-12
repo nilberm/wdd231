@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northbound | Canada Relocation Guide for Skilled Workers</title>
+    <meta name="description" content="Compare Canadian cities by rent, population, and weather, and learn about Express Entry and provincial nominee pathways before you move.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Northbound">
+    <meta property="og:title" content="Northbound | Canada Relocation Guide for Workers">
+    <meta property="og:description" content="Compare Canadian cities by rent, population, and weather, and learn about Express Entry and provincial nominee pathways before you move.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/final/images/northbound-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/final/index.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/home.mjs"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="" width="40" height="40">
+                <span>Northbound</span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="pathways.html">Pathways</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="hero">
+            <img
+                src="images/hero-sm.webp"
+                srcset="images/hero-sm.webp 600w, images/hero-lg.webp 1200w"
+                sizes="100vw"
+                alt="Turquoise Lake Louise surrounded by snowy mountains in the Canadian Rockies"
+                width="1200" height="600"
+                fetchpriority="high">
+            <div class="hero__overlay">
+                <div class="wrap">
+                    <div class="hero__text">
+                        <h1>Find your city in Canada</h1>
+                        <p>Compare cost of living and population across cities.</p>
+                        <a class="btn" href="cities.html">Explore Cities</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <section class="section" aria-labelledby="featured-title">
+                <h2 id="featured-title">Featured Cities</h2>
+                <p id="featured-stats">Loading city data...</p>
+                <div id="featured-cities" class="card-grid"></div>
+                <p><a href="cities.html">See all cities and filter by province</a></p>
+            </section>
+
+            <section class="section split" aria-labelledby="pathways-title">
+                <div>
+                    <h2 id="pathways-title">Immigration Pathways</h2>
+                    <p>Moving to Canada as a skilled worker usually starts with Express Entry or a provincial nominee program. Each route has its own requirements and timeline.</p>
+                    <p>Learn how the main pathways work and send us your budget and climate preferences to get city recommendations.</p>
+                    <a class="btn" href="pathways.html">Explore immigration pathways</a>
+                </div>
+                <img src="images/pathways.webp" alt="Peace Tower and Centre Block of the Parliament buildings in Ottawa" width="600" height="400" loading="lazy">
+            </section>
+
+            <section class="section" aria-labelledby="help-title">
+                <h2 id="help-title">How Northbound Helps</h2>
+                <ul class="features">
+                    <li><strong>Compare cities</strong>See rent, population, winter climate, and the main immigration pathway for each city side by side.</li>
+                    <li><strong>Check the weather</strong>Open any city to see its live weather before you decide.</li>
+                    <li><strong>Save favorites</strong>Keep a short list of cities on this device and come back to it later.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <ul class="footer-links">
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project demo video</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+            <p class="footer-brand">Northbound</p>
+            <p class="footer-meta">&copy; <span id="year">2026</span> Nilber Mota<br>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

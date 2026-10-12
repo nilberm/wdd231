@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immigration Pathways | Northbound</title>
+    <meta name="description" content="Learn how Express Entry, provincial nominee programs, and work permits work, then request city recommendations that match your budget.">
+    <meta name="author" content="Nilber Mota">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Northbound">
+    <meta property="og:title" content="Canada Immigration Pathways | Northbound Guide">
+    <meta property="og:description" content="Learn how Express Entry, provincial nominee programs, and work permits work, then request city recommendations that match your budget.">
+    <meta property="og:image" content="https://nilberm.github.io/wdd231/final/images/northbound-og.png">
+    <meta property="og:url" content="https://nilberm.github.io/wdd231/final/pathways.html">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script type="module" src="scripts/site.mjs"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="wrap site-header__inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="" width="40" height="40">
+                <span>Northbound</span>
+            </a>
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cities.html">Cities</a></li>
+                    <li><a href="pathways.html" aria-current="page">Pathways</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="wrap">
+        <h1 class="page-title">Immigration Pathways</h1>
+        <p class="lede">A short overview of the main ways skilled workers move to Canada. Rules and processing times change, so always confirm details on the official government website.</p>
+
+        <div class="pathways-layout">
+            <div class="pathways-content">
+                <section class="card" aria-labelledby="express-title">
+                    <h2 id="express-title">Express Entry</h2>
+                    <p>Express Entry is the federal system that manages applications for permanent residence from skilled workers. It covers the Federal Skilled Worker Program, the Federal Skilled Trades Program, and the Canadian Experience Class.</p>
+                    <ol class="steps">
+                        <li>Check that you meet the requirements of at least one program.</li>
+                        <li>Create an online profile and receive a Comprehensive Ranking System score.</li>
+                        <li>Wait for an invitation to apply during a draw.</li>
+                        <li>Submit your complete application for permanent residence.</li>
+                    </ol>
+                </section>
+
+                <section class="card" aria-labelledby="pnp-title">
+                    <h2 id="pnp-title">Provincial Nominee Programs</h2>
+                    <p>Most provinces and territories run their own programs to select workers who match local labour needs. A nomination can add a large number of points to an Express Entry profile. Each city page lists the main program for its province.</p>
+                </section>
+
+                <section class="card" aria-labelledby="permits-title">
+                    <h2 id="permits-title">Work permits</h2>
+                    <p>A work permit lets you work in Canada for a limited time. Many permits are tied to a specific employer, while open work permits allow you to work for almost any employer. Canadian work experience can later help your permanent residence application.</p>
+                    <p>Official information: <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener">Immigration, Refugees and Citizenship Canada</a>.</p>
+                </section>
+            </div>
+
+            <section class="card form-card" aria-labelledby="form-title">
+                <h2 id="form-title">Get city recommendations</h2>
+                <form action="confirmation.html" method="get">
+                    <label class="field" for="fullName">Full name
+                        <input type="text" id="fullName" name="fullName" title="Your full name" autocomplete="name" required>
+                    </label>
+                    <label class="field" for="email">Email address
+                        <input type="email" id="email" name="email" title="Your email address" autocomplete="email" placeholder="name@example.com" required>
+                    </label>
+                    <label class="field" for="budget">Maximum monthly rent (CAD)
+                        <input type="number" id="budget" name="budget" title="Maximum monthly rent in Canadian dollars" min="500" max="6000" step="50" inputmode="numeric" required>
+                    </label>
+                    <label class="field" for="climate">Preferred winters
+                        <select id="climate" name="climate" title="Preferred winter climate">
+                            <option value="any">No preference</option>
+                            <option value="mild">Mild</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="cold">Cold and snowy</option>
+                        </select>
+                    </label>
+                    <label class="field" for="familySize">Family size
+                        <input type="number" id="familySize" name="familySize" title="Number of people moving" min="1" max="10" value="1" required>
+                    </label>
+                    <label class="field" for="pathway">Pathway you are considering
+                        <select id="pathway" name="pathway" title="Immigration pathway you are considering">
+                            <option value="not-sure">Not sure yet</option>
+                            <option value="express-entry">Express Entry</option>
+                            <option value="pnp">Provincial Nominee Program</option>
+                            <option value="work-permit">Work permit</option>
+                        </select>
+                    </label>
+                    <label class="field" for="notes">Notes (optional)
+                        <textarea id="notes" name="notes" title="Anything else we should know" rows="3"></textarea>
+                    </label>
+                    <button type="submit" class="btn">Get recommendations</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer__inner">
+            <ul class="footer-links">
+                <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">Project demo video</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+            <p class="footer-brand">Northbound</p>
+            <p class="footer-meta">&copy; <span id="year">2026</span> Nilber Mota<br>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
